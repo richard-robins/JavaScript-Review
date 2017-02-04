@@ -58,6 +58,8 @@ match();
 var first = [1,2,3,4,5];
 var second;
 
+  second = first.slice()
+  second.push(6,7);
   //code here
 
 alert(first) //[1,2,3,4,5];
@@ -71,9 +73,23 @@ alert(second) //[1,2,3,4,5,6,7];
 
 //write a function called longest that takes in our sentence variable, and returns the longest word in that sentence.
 var sentence = "Dev Mountain is the best"
-
+//var splitter = ' ';
+console.log(sentence);
   //code here
+function longest (sentence){
+  var tempStr = sentence.split(' ');
+  var biggest = tempStr[0].length;
 
+  for(var i = 1; i < tempStr.length; i++){
+
+    if (biggest < tempStr[i].length){
+      biggest = tempStr[i];
+    }
+  }
+    return biggest;
+}
+
+longest(sentence);
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
