@@ -36,8 +36,20 @@ var getRandomArbitrary = function() {
 var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
   //code here
+function match(num1) {
+  num1 = getRandomArbitrary();
+  console.log(num1);
+  //needs an additional for loop
+  for(var i = 0; i < randomArray.length; i++) {
+    if(num1 == randomArray[i]) {
+      return true;
+    }
 
+  }
+  return false;
+}
 
+match();
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
